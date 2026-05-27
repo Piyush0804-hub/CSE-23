@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Filter</title>
+</head>
+<body>
+
+<h2>Employees with Salary > 50,000</h2>
+
+<button onclick="showHighSalary()">Show Employees</button>
+
+<div id="output"></div>
+
+<script>
+    let employees = [
+        { name: "Rahul", salary: 60000 },
+        { name: "Aman", salary: 45000 },
+        { name: "Priya", salary: 75000 },
+        { name: "Neha", salary: 30000 }
+    ];
+
+    function showHighSalary() {
+        let result = "";
+
+        employees.forEach(function(emp) {
+            if (emp.salary > 50000) {
+                result += "Name: " + emp.name + 
+                          " | Salary: ₹" + emp.salary + "<br>";
+            }
+        });
+
+        document.getElementById("output").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
